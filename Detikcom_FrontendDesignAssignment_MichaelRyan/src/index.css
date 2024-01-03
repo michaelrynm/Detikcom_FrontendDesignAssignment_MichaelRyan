@@ -1,0 +1,54 @@
+.reg-button {
+  background: linear-gradient(to top right, #326cff, #59ffb9);
+}
+
+body {
+  height: 200vh;
+}
+.background {
+  background-image: url("../src/assets/background.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  height: 100vh;
+}
+
+.card {
+  background: linear-gradient(to right, #326cff, #59ffb9);
+}
+
+.support {
+  background: linear-gradient(to right, #326cff, #59ffb9);
+}
+
+.perform-image {
+  transition: transform 0.4s;
+}
+
+.perform-image:hover {
+  transform: scale(1.2);
+}
+
+.sponsor {
+  background: linear-gradient(to top right, #326cff, #59ffb9);
+}
+
+.carousel-container {
+  animation: scrollAnimation 10s linear infinite;
+}
+
+@keyframes scrollAnimation {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.tabcon {
+  background: linear-gradient(to  right, #326cff, #59ffb9);
+  width: 333px;
+}
