@@ -11,7 +11,7 @@ export default function Acara() {
       >
         <div>
           <div
-            className="card rounded-5 p-3 text-white "
+            className="card rounded-5 p-3 text-white acara"
             style={{ width: "500px" }}
           >
             <img src={Map} className="card-img-top" alt="..." />
@@ -30,7 +30,7 @@ export default function Acara() {
         <div>
           <div className="d-flex flex-column gap-3">
             <div
-              className="card text-white rounded-5"
+              className="card text-white rounded-5 acara"
               style={{
                 width: "36rem",
                 height: "150px",
@@ -49,7 +49,7 @@ export default function Acara() {
             </div>
 
             <div
-              className="card text-white rounded-5"
+              className="card text-white rounded-5 acara"
               style={{
                 width: "36rem",
                 height: "150px",
@@ -68,7 +68,7 @@ export default function Acara() {
             </div>
 
             <div
-              className="card text-white rounded-5"
+              className="card text-white rounded-5 acara"
               style={{
                 width: "36rem",
                 height: "200px",
@@ -99,9 +99,9 @@ export default function Acara() {
         </div>
       </div>
       <div className="d-flex justify-content-center ">
-        <button className="btn btn-warning btn-lg  text-white rounded-pill mt-5 ">
+        <a href="https://event.detik.com/" className="btn btn-warning btn-lg  text-white rounded-pill mt-5 ">
           Daftar Sekarang
-        </button>
+        </a>
       </div>
     </div>
   );

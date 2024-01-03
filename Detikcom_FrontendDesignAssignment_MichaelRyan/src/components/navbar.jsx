@@ -1,34 +1,52 @@
 import React from "react";
 import Logo from "../assets/logo.svg";
+import { useRef } from "react";
 
-export default function Navbar() {
+const Navbar = ({ scrollToSection }) => {
   return (
-    <div className="sticky-container"> {/* Add a container for sticky behavior */}
+    <div className="sticky-container">
       <div
         style={{ position: "sticky", top: "0", zIndex: 999 }}
         className="container bg-white shadow-lg bg-opacity-50 rounded-pill d-flex justify-content-between p-4 align-items-center"
-      > {/* Remove mt-5 to avoid initial offset */}
+      >
         <div>
           <img src={Logo} alt="Logo" />
         </div>
         <div className="d-flex gap-5 align-items-center">
-          <a href="" className="text-decoration-none text-black fw-medium">
+          <button
+            onClick={() => scrollToSection("home")}
+            className="text-black border-0 bg-transparent fw-medium"
+          >
             Home
-          </a>
-          <a href="" className="text-decoration-none text-black fw-medium">
-            Tentang Acara
-          </a>
-          <a href="" className="text-decoration-none text-black fw-medium">
-            Galeri
-          </a>
-          <a href="" className="text-decoration-none text-black fw-medium">
-            Berita
-          </a>
-          <button className="btn reg-button text-white fw-medium rounded-5">
-            Registrasi
           </button>
+          <button
+            onClick={() => scrollToSection("tentang-acara")}
+            className="text-black border-0 bg-transparent fw-medium"
+          >
+            Tentang Acara
+          </button>
+          <button
+            onClick={() => scrollToSection("galeri")}
+            className="text-black border-0 bg-transparent fw-medium"
+          >
+            Galeri
+          </button>
+          <button
+            onClick={() => scrollToSection("berita")}
+            className="text-black border-0 bg-transparent fw-medium"
+          >
+            Berita
+          </button>
+          <a
+            href="https://event.detik.com/"
+            className="btn reg-button text-white fw-medium rounded-5"
+          >
+            Registrasi
+          </a>
         </div>
       </div>
     </div>
   );
-}
+};
+
+export default Navbar;
