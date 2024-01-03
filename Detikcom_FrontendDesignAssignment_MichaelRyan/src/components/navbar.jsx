@@ -4,10 +4,9 @@ import { useRef } from "react";
 
 const Navbar = ({ scrollToSection }) => {
   return (
-    <div className="sticky-container">
+    <div className="navbar-cont">
       <div
-        style={{ position: "sticky", top: "0", zIndex: 999 }}
-        className="container bg-white shadow-lg bg-opacity-50 rounded-pill d-flex justify-content-between p-4 align-items-center"
+        className="container bg-white shadow-lg bg-opacity-50 rounded-pill d-flex justify-content-between p-4 align-items-center mt-5 "
       >
         <div>
           <img src={Logo} alt="Logo" />

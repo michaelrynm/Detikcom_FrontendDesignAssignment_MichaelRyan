@@ -11,10 +11,10 @@ export default function Acara() {
       >
         <div>
           <div
-            className="card rounded-5 p-3 text-white acara"
+            className="card rounded-5 p-3 text-white acara overflow-hidden "
             style={{ width: "500px" }}
           >
-            <img src={Map} className="card-img-top" alt="..." />
+            <img src={Map} className="card-img-top map-image" alt="..." />
             <div className="card-body">
               <h5 className="card-title fw-bolder  fs-1 fst-italic ">
                 10K FUN RUN
@@ -75,8 +75,8 @@ export default function Acara() {
                 fontFamily: "sans-serif",
               }}
             >
-              <div className="d-flex justify-content-center align-items-center ps-2 ">
-                <div>
+              <div className="d-flex justify-content-center align-items-center ps-2 overflow-hidden">
+                <div className="">
                   <img
                   className="perform-image"
                     src={CardImage}

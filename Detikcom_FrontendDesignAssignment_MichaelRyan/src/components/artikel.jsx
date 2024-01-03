@@ -5,8 +5,16 @@ import image3 from "../assets/artikel/artikel3.svg";
 import image4 from "../assets/artikel/artikel4.svg";
 import image5 from "../assets/artikel/artikel5.svg";
 import image6 from "../assets/artikel/artikel6.svg";
+import { useState } from "react";
 
 export default function Artikel() {
+  const [activeTab, setActiveTab] = useState("artikel");
+
+  const handleTabClick = (tab, e) => {
+    e.preventDefault()
+    setActiveTab(tab);
+  };
+
   return (
     <div className="bg-berita">
       <div style={{ marginTop: 356 }}>
@@ -15,13 +23,22 @@ export default function Artikel() {
         </div>
         <div className="d-flex justify-content-center ">
           <div className="d-flex justify-content-center gap-5 tabcon rounded-5 p-2">
-            <a href="" className="text-decoration-none text-white fw-bold ">
+            <a
+              href=""
+              className={`text-decoration-none text-white fw-bold ${activeTab === "artikel" && "active bg-opacity-50 bg-white rounded-5 w-25 text-center "}`}
+              onClick={(e) => handleTabClick("artikel", e)}
+            >
               Artikel
             </a>
-            <a href="" className="text-decoration-none text-white fw-bold ">
+            <a
+              href=""
+              className={`text-decoration-none text-white fw-bold ${activeTab === "foto" && "active bg-opacity-50 bg-white rounded-5 w-25 text-center"}`}
+              onClick={(e) => handleTabClick("foto", e)}
+            >
               Foto
             </a>
-            <a href="" className="text-decoration-none text-white fw-bold ">
+            <a href="" className={`text-decoration-none text-white fw-bold ${activeTab === "video" && "active bg-opacity-50 bg-white rounded-5 w-25 text-center"}`}
+            onClick={(e) => handleTabClick("video", e)}>
               Video
             </a>
           </div>
